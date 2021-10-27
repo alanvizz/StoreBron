@@ -1,13 +1,7 @@
 import React, {useState} from 'react';
-import ProductImage from '../../assets/pelota.jpg';
 
-const style = {
-	card: {
-		marginTop: 20,
-		width: '30%',
-		marginRight: 'auto',
-		marginLeft: 'auto',
-	},
+
+const style = {	
 	icon: {
 		fontSize : 14,
 	},
@@ -15,12 +9,7 @@ const style = {
 		fontSize: 18,
 		fontWeight: 'bold',
 	},
-	image: {
-		width: 200,
-		heigth: 200,
-		marginRight: 'auto',
-		marginLeft: 'auto',
-	},
+	
 }
 
 const ItemCount = function({ max, min, initial, onAdd }){
@@ -36,32 +25,31 @@ const ItemCount = function({ max, min, initial, onAdd }){
 	}
 
 	return(
-		<>
-			<div className="card" style={style.card}>
-  				<img style={style.image} className="card-img-top" src={ProductImage} alt="product-image"/>
+		<>	
   				<div className="card-body">
-    				<div className="row">
-  						<div className="col">
-  							<a onClick={removeItem} className="btn btn-info">
-  								<i style={style.icon} class="fa fa-minus"></i>
-  							</a>
-  						</div>
-  						<div className="col">
-  							<p style={style.text}>{ counter }</p>
-  						</div>
-  						<div className="col">
-  							<a onClick={addItem} className="btn btn-info">
-  								<i style={style.icon} class="fa fa-plus"></i>
-  							</a>
-  						</div>
-  					</div>
-  				</div>
-  				<div className="card-footer">
-  					<button onClick={ () => onAdd(counter) } className="btn btn-info">Agregar al carrito</button>
-  				</div>
-			</div>
+						<div className="row">
+							<div className="col">
+								<a onClick={removeItem} className="btn btn-info">
+								<i style={style.icon} class="fa fa-minus"></i>
+								</a>
+							</div>
+
+							<div className="col">
+								<p style={style.text}>{ counter }</p>
+							</div>
+
+							<div className="col">
+								<a onClick={addItem} className="btn btn-info">
+								<i style={style.icon} class="fa fa-plus"></i>
+								</a>
+							</div>
+						</div>	  
+  				
+				</div>
+  			<div className="card-footer">
+  				<button onClick={ () => onAdd(counter) } className="btn btn-info">Agregar al carrito</button>
+  			</div>			
 		</>
-		);
-}
+		);}
 
 export default ItemCount;

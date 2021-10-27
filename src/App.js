@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Navbar from './navbar/Navbar.js';
-import Home from './home/Home.js';
+import ItemListContainer from './home/ItemListContainer';
 
 function App() {  
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <ItemListContainer/>
     </div>
-  );
+  )
 }
 
 export default App;
