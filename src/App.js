@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './navbar/Navbar.js';
-import ItemListContainer from './home/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {  
   return (

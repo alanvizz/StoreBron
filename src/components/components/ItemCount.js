@@ -17,11 +17,11 @@ const ItemCount = function({ max, min, initial, onAdd }){
 	const [counter, setCounter] = useState(initial);
 
 	const removeItem = function(){
-		counter > min ? setCounter(counter-1) : console.log('Se llegó al límite minimo');
+		counter > min ? setCounter(counter-1) : alert('Se llegó al límite minimo');
 	}
 
 	const addItem = function(){
-		counter < max ? setCounter(counter+1) : console.log('Se llegó al límite máximo');
+		counter < max ? setCounter(counter+1) : alert('Se llegó al límite máximo');
 	}
 
 	return(
